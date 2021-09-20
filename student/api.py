@@ -7,3 +7,7 @@ from .models import *
 class SubjectCreateApi(generics.CreateAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
+
+class SubjectApi(generics.ListAPIView):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
