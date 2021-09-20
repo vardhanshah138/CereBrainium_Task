@@ -15,3 +15,7 @@ class SubjectApi(generics.ListAPIView):
 class SubjectUpdateApi(generics.RetrieveUpdateAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
+
+class SubjectDeleteApi(generics.DestroyAPIView):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
